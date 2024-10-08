@@ -1,0 +1,20 @@
+---
+title: "Tara_corail"
+output: github_document
+date: "2024-10-08"
+---
+
+## **1) Get Data**
+
+```{r}
+# Créer un dossier
+dir.create("Total_data_file_corail")
+```
+
+Grace à la fonction mv dans le terminal, je déplace mon fichier texte contenant les liens de téléchargement dans le nouveau fichier Total_data_file_corail: mv Total_Data_Link Total_data_file_corail/
+
+Ensuite, je télécharge la totalité des fichiers dans mon nouveau dossier Total_data_file_corail
+```{r}
+# Télécharger les fichiers en utilisant wget
+system("wget -i Total_data_file_corail/Total_Data_Link -P Total_data_file_corail")
+```
